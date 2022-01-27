@@ -2,6 +2,7 @@ const status = document.querySelector('.game--status')
 const res = document.querySelector('.game--restart')
 let cell = document.querySelectorAll('.cell')
 let shablon = ['', '', '', '', '', '', '', '', '',]
+let nega = false
 
 function won() {
     status.innerHTML = 'Yutdim mayli siqilmen kengi safar oxwidi hudo holasa randomku'
@@ -9,7 +10,7 @@ function won() {
         document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
         shablon = ['', '', '', '', '', '', '', '', '',]
         status.innerHTML = ''
-    }, 5000);
+    }, 3000);
 }
 
 function Iwon() {
@@ -18,24 +19,36 @@ function Iwon() {
         document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
         shablon = ['', '', '', '', '', '', '', '', '',]
         status.innerHTML = ''
-    }, 5000);
+    }, 3000);
 }
 
 function draw() {
-    status.innerHTML = 'Durrang boldi vahaha'
+    status.innerHTML = 'Durrang qilisham bir mahorat'
     setTimeout(() => {
         document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
         shablon = ['', '', '', '', '', '', '', '', '',]
         status.innerHTML = ''
-    }, 5000);
+    }, 3000);
 }
 
-function check() {
+function check(nega) {
         if (shablon[0] === '1' && shablon[1] === '1' && shablon[2] === '1' || shablon[3] === '1' && shablon[4] === '1' && shablon[5] === '1' || shablon[6] === '1' && shablon[7] === '1' && shablon[8] === '1' || shablon[0] === '1' && shablon[3] === '1' && shablon[6] === '1' || shablon[1] === '1' && shablon[4] === '1' && shablon[7]  === '1' || shablon[2] === '1' && shablon[5] === '1' && shablon[8]  === '1' || shablon[0] === '1' && shablon[4] === '1' && shablon[8]  === '1' || shablon[2] === '1' && shablon[4] === '1' && shablon[6]  === '1') {
             Iwon()
         }
         if (shablon[0] === '0' && shablon[1] === '0' && shablon[2] === '0' || shablon[3] === '0' && shablon[4] === '0' && shablon[5] === '0' || shablon[6] === '0' && shablon[7] === '0' && shablon[8] === '0' || shablon[0] === '0' && shablon[3] === '0' && shablon[6] === '0' || shablon[1] === '0' && shablon[4] === '0' && shablon[7]  === '0' || shablon[2] === '0' && shablon[5] === '0' && shablon[8]  === '0' || shablon[0] === '0' && shablon[4] === '0' && shablon[8]  === '0' || shablon[2] === '0' && shablon[4] === '0' && shablon[6]  === '0') {
             won()
+        }
+        if (nega) {
+            if (shablon[0] === '1' && shablon[1] === '1' && shablon[2] === '1' || shablon[3] === '1' && shablon[4] === '1' && shablon[5] === '1' || shablon[6] === '1' && shablon[7] === '1' && shablon[8] === '1' || shablon[0] === '1' && shablon[3] === '1' && shablon[6] === '1' || shablon[1] === '1' && shablon[4] === '1' && shablon[7]  === '1' || shablon[2] === '1' && shablon[5] === '1' && shablon[8]  === '1' || shablon[0] === '1' && shablon[4] === '1' && shablon[8]  === '1' || shablon[2] === '1' && shablon[4] === '1' && shablon[6]  === '1') {
+                Iwon()
+            }
+            else if (shablon[0] === '0' && shablon[1] === '0' && shablon[2] === '0' || shablon[3] === '0' && shablon[4] === '0' && shablon[5] === '0' || shablon[6] === '0' && shablon[7] === '0' && shablon[8] === '0' || shablon[0] === '0' && shablon[3] === '0' && shablon[6] === '0' || shablon[1] === '0' && shablon[4] === '0' && shablon[7]  === '0' || shablon[2] === '0' && shablon[5] === '0' && shablon[8]  === '0' || shablon[0] === '0' && shablon[4] === '0' && shablon[8]  === '0' || shablon[2] === '0' && shablon[4] === '0' && shablon[6]  === '0') {
+                won()
+            }
+            else {
+                nega = false
+                draw()
+            }
         }
 }
 
@@ -51,7 +64,8 @@ for (let cel of cell) {
             if (count > 6) {
                 shablon[index] = '1'
                 cel.textContent = 'X'
-                check()
+                nega = true
+                check(nega)
                 return
             }
             while (random == index || random <= 0 || shablon[random]) {
