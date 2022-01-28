@@ -7,16 +7,19 @@ let nega = false
 function won() {
     status.innerHTML = 'Yutdim mayli siqilmen kengi safar oxwidi hudo holasa randomku'
     shablon.fill('1')
+    return
 }
 
 function Iwon() {
     status.innerHTML = 'Qoyil yutdingiz'
     shablon.fill('0')
+    return
 }
 
 function draw() {
     status.innerHTML = 'Durrang qilisham bir mahorat'
     shablon.fill('d')
+    return
 }
 
 function check(nega) {
