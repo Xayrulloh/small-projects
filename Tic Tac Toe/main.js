@@ -6,29 +6,17 @@ let nega = false
 
 function won() {
     status.innerHTML = 'Yutdim mayli siqilmen kengi safar oxwidi hudo holasa randomku'
-    setTimeout(() => {
-        document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
-        shablon = ['', '', '', '', '', '', '', '', '',]
-        status.innerHTML = ''
-    }, 3000);
+    shablon.fill('1')
 }
 
 function Iwon() {
     status.innerHTML = 'Qoyil yutdingiz'
-    setTimeout(() => {
-        document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
-        shablon = ['', '', '', '', '', '', '', '', '',]
-        status.innerHTML = ''
-    }, 3000);
+    shablon.fill('0')
 }
 
 function draw() {
     status.innerHTML = 'Durrang qilisham bir mahorat'
-    setTimeout(() => {
-        document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
-        shablon = ['', '', '', '', '', '', '', '', '',]
-        status.innerHTML = ''
-    }, 3000);
+    shablon.fill('d')
 }
 
 function check(nega) {
