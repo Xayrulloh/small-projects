@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Lobster&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/main.css">
+	<title>LOOK ORDER</title>
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+			<div class="navbar-top">   <!--emblema Loook-->
+				<a href="#">
+					<img src="./img/logo.svg" alt="logo" height="50">  <!--rasmi -->
+				</a>
+			</div>
+			<div class="navbar-main">  <!-- xaridorla royxati -->
+				<ul id="list" class="customers-list">  <!-- ul ocvolingan --></ul>
+			</div>
+			<div class="navbar-footer">  <!-- xaridor qowiw joyi -->
+				<form id="userAdd">  
+					<input id="usernameInput" type="text" placeholder="username..." required> <!-- xaridorri ismi -->
+					<input id="telephoneInput" type="tel" placeholder="telephone..." required>  <!-- xaridorri telefoni -->
+					<button type="submit" id="submitUsers">  <!-- bosganda soxranit qib qoyadigan button -->
+						<img src="https://img.icons8.com/pastel-glyph/64/000000/add-user-male--v2.png" alt="plus-icon">  
+					</button>
+				</form>
+			</div>
+		</div>
+		<div class="main">  <!-- on tomondigi oynaga otilgan-->
+			<div class="main-headers">  <!-- id isi va ismi ciqib turadigan joyi -->
+				<div class="cutomer-id-wrapper">  <!-- idi sini korsatvokkan joyi -->
+					<span id="show"></span>   
+					<span id="clientId"></span>
+				</div>
+				<h1 id="userHeader" class="customer-name"></h1>  <!-- ismini korsatadigan joyi -->
+			</div>
+			<div class="main-orders">  <!-- nechta nima zakas qigani turadigan joyi -->
+				<ul id="ordersList" class="orders-list">  <!-- shunga nimadir zakas qisa osha narsani qoshb ketaman --></ul>
+			</div>
+			<div class="main-footer"> <!-- oxirgi bosqichi yani zakas qiliwcun bosadigan narsalari turadgan joy-->
+				<form id="foodsForm">
+					<select id="foodsSelect">  <!-- nima ovqat zakas qiliwi -->
+						<!-- mock food. keyin o'chirib tashlang -->
+						<option value="Cola">Cola</option>  <!-- list icidigi cola yani 1 ta example -->
+						<option value="Fanta">Fanta</option>
+						<option value="Burger Cheese">Burger Cheese</option>
+						<option value="Chicken Togora">Chicken Togora</option>
+						<option value="Chicken Wings">Chicken Wings</option>
+						<option value="Combo">Combo</option>
+						<option value="Spinner">Spinner</option>
+					</select>
+					<input id="foodsCount" type="text" placeholder="count" maxlength="2" required>  <!-- nechtaligini oladgan joyimis -->
+					<button type="submit" id="submitFoods">  <!-- plus bosa qoshish yo qoshmaslini hal qilish kere -->
+						<img src="https://img.icons8.com/plasticine/100/000000/plus-math.png" alt="plus-button" height="35">
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="./js/look.js"></script>
+</body>
+</html>
