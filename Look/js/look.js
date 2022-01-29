@@ -10,7 +10,8 @@ let li = document.querySelectorAll('.customer-item')
 
 submitUsers.onclick = (even) => {
     even.preventDefault()
-    if (usernameInput.value.length <= 30 && !usernameInput.value.includes(' ') && /^[A-Za-z\s]*$/.test(usernameInput.value) && telephoneInput.value.length == 12 && /^\d+$/.test(telephoneInput.value.slice(1)) && telephoneInput.value.slice(0, 4) == '9989') {
+    console.log(telephoneInput.value.slice(0, 3));
+    if (usernameInput.value.length <= 30 && !usernameInput.value.includes(' ') && /^[A-Za-z\s]*$/.test(usernameInput.value) && telephoneInput.value.length == 12 && /^\d+$/.test(telephoneInput.value.slice(1)) && telephoneInput.value.slice(0, 3) == '998') {
         let Id = Date.now().toString().slice(-4)
         let newCustomer = {name: usernameInput.value, phone: telephoneInput.value, clientID: Id}
         customer.push(newCustomer)
