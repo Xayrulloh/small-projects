@@ -100,23 +100,6 @@ submitFoods.onclick = (even) => {
 }
 
 
-// let li = document.createElement('li')
-// let image = document.createElement('img')
-// let div = document.createElement('div')
-// let span1 = document.createElement('span')
-// let span2 = document.createElement('span')
-
-// span1.setAttribute('class', 'order-name')
-// span2.setAttribute('class', 'order-count')
-// li.setAttribute('class', "order-item")
-
-// span1.textContent = foods
-// span2.textContent = ordeR[foods]
-// div.append(span1, span2)
-// image.src = `./img/${foods}.jpeg`
-// li.append(image, div)
-// ordersList.append(li)
-
 
 
 
