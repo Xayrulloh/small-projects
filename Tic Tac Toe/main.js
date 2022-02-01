@@ -286,21 +286,21 @@ function optimus() {
 }
 
 function won() {
-    status.innerHTML = 'Yutdim mayli siqilmen kengi safar oxwidi hudo holasa randomku'
+    status.innerHTML = 'Vay sharmanda !!'
     shablon.fill('optimus')
     isFinished = true
     return
 }
 
 function Iwon() {
-    status.innerHTML = 'Qoyil yutdingiz'
+    status.innerHTML = 'Qanaqa qilib yutganingizzi eslab qolin iltimos'
     shablon.fill('opimus')
     isFinished = true
     return
 }
 
 function draw() {
-    status.innerHTML = 'Durrang qilisham bir mahorat'
+    status.innerHTML = 'Yutomis'
     return
 }
 
