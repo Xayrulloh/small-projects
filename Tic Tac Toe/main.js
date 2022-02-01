@@ -250,14 +250,22 @@ function optimus() {
         shablon[8] = '0'
         cell[8].textContent = 'O'
     }
+    else if (shablon[1] == '1' && shablon[4] == '0' && shablon[6] == '1' && shablon[8] == '') {
+        shablon[3] = '0'
+        cell[3].textContent = 'O'
+    }
+    else if (shablon[1] == '1' && shablon[4] == '0' && shablon[8] == '1' && shablon[8] == '') {
+        shablon[5] = '0'
+        cell[5].textContent = 'O'
+    }
 // -----------------
     else {
         for (let a = 0, b = 8; a < 4; a++, b--) {
             console.log('a');
             if (!shablon[a] && !shablon[b]) {
                 console.log('yeah');
-                shablon[a] = '0'
-                cell[a].textContent = 'O'
+                shablon[b] = '0'
+                cell[b].textContent = 'O'
                 return
             }
         }
