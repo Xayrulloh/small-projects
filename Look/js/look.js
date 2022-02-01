@@ -10,7 +10,6 @@ let li = document.querySelectorAll('.customer-item')
 
 submitUsers.onclick = (even) => {
     even.preventDefault()
-    console.log(telephoneInput.value.slice(0, 3));
     if (usernameInput.value.length <= 30 && !usernameInput.value.includes(' ') && /^[A-Za-z\s]*$/.test(usernameInput.value) && telephoneInput.value.length == 12 && /^\d+$/.test(telephoneInput.value.slice(1)) && telephoneInput.value.slice(0, 3) == '998') {
         let Id = Date.now().toString().slice(-4)
         let newCustomer = {name: usernameInput.value, phone: telephoneInput.value, clientID: Id}
@@ -28,7 +27,6 @@ submitUsers.onclick = (even) => {
 }
 
 function showFoods(l) {
-    console.log(l);
     show.textContent = 'client id:'
     userHeader.textContent = 'customer:  ' + l.children[0].textContent
     clientId.textContent =  l.children[0].getAttribute('id')
@@ -56,8 +54,9 @@ for (let l of li) {
 
 submitFoods.onclick = (even) => {
     even.preventDefault()
-    let [food, count, id] = [foodsSelect.value, foodsCount.value, lii.children[0].getAttribute('id')]
+    let [food, count] = [foodsSelect.value, foodsCount.value]
     if (count <= 10 && show.textContent) {
+        let id = lii.children[0].getAttribute('id')
         let order = window.localStorage.getItem('orders')
         order = order ? JSON.parse(order) : []
         let strFormat = JSON.stringify(order)
