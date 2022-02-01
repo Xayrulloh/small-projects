@@ -238,6 +238,14 @@ function optimus() {
         cell[2].textContent = 'O'
     }
 // -------------------- for bug larini oldini olish
+    else if (shablon[4] == '0' && shablon[2] == '1' && shablon[3] == '1' && shablon[1] == '') {
+        shablon[1] = '0'
+        cell[1].textContent = 'O'
+    }
+    else if (shablon[4] == '0' && shablon[1] == '1' && shablon[3] == '1' && shablon[0] == '') {
+        shablon[0] = '0'
+        cell[0].textContent = 'O'
+    }
     else if (shablon[0] == '0' && shablon[4] == '1' && shablon[8] == '1' && shablon[6] == '') {
         shablon[6] = '0'
         cell[6].textContent = 'O'
@@ -250,20 +258,18 @@ function optimus() {
         shablon[8] = '0'
         cell[8].textContent = 'O'
     }
-    else if (shablon[1] == '1' && shablon[4] == '0' && shablon[6] == '1' && shablon[8] == '') {
+    else if (shablon[1] == '1' && shablon[4] == '0' && shablon[6] == '1' && shablon[3] == '') {
         shablon[3] = '0'
         cell[3].textContent = 'O'
     }
-    else if (shablon[1] == '1' && shablon[4] == '0' && shablon[8] == '1' && shablon[8] == '') {
+    else if (shablon[1] == '1' && shablon[4] == '0' && shablon[8] == '1' && shablon[5] == '') {
         shablon[5] = '0'
         cell[5].textContent = 'O'
     }
 // -----------------
     else {
         for (let a = 0, b = 8; a < 4; a++, b--) {
-            console.log('a');
             if (!shablon[a] && !shablon[b]) {
-                console.log('yeah');
                 shablon[b] = '0'
                 cell[b].textContent = 'O'
                 return
