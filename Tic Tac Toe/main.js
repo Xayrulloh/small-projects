@@ -17,7 +17,6 @@ function check() {
         if (a) count++
     }
     if (count == 9) {
-        console.log(shablon);
         draw()
     }
 }
@@ -45,113 +44,203 @@ function optimus() {
     if (shablon[4] == '') {
         shablon[4] = '0'
         cell[4].textContent = 'O'
-        return
-    }else if (shablon[4] == '1' && shablon[0] == '') {
-        shablon[0] == '0'
-        cell[0].textContent = 'O'
-        return
     }
-    // ---------------------
+    else if (shablon[4] == '1' && shablon[0] == '') {
+        shablon[0] = '0'
+        cell[0].textContent = 'O'
+    }
+// -------------------
+    else if (shablon[0] == '0' && shablon[1] == '0' && shablon[2] == '') {
+        shablon[2] = '0'
+        cell[2].textContent = 'O'
+    }
+    else if (shablon[2] == '0' && shablon[1] == '0' && shablon[0] == '') {
+        shablon[0] = '0'
+        cell[0].textContent = 'O'
+    }
+    else if (shablon[0] == '0' && shablon[1] == '' && shablon[2] == '0') {
+        shablon[1] = '0'
+        cell[1].textContent = 'O'
+    }
+// ---------
+    else if (shablon[3] == '0' && shablon[4] == '0' && shablon[5] == '') {
+        shablon[5] = '0'
+        cell[5].textContent = 'O'
+    }
+    else if (shablon[5] == '0' && shablon[4] == '0' && shablon[3] == '') {
+        shablon[3] = '0'
+        cell[3].textContent = 'O'
+    }
+    else if (shablon[3] == '0' && shablon[4] == '' && shablon[5] == '0') {
+        shablon[4] = '0'
+        cell[4].textContent = 'O'
+    }
+// --------
+    else if (shablon[6] == '0' && shablon[7] == '0' && shablon[8] == '') {
+        shablon[8] = '0'
+        cell[8].textContent = 'O'
+    }
+    else if (shablon[8] == '0' && shablon[7] == '0' && shablon[6] == '') {
+        shablon[6] = '0'
+        cell[6].textContent = 'O'
+    }
+    else if (shablon[6] == '0' && shablon[7] == '' && shablon[8] == '0') {
+        shablon[7] = '0'
+        cell[7].textContent = 'O'
+    }
+// ----------------------
+    else if (shablon[0] == '0' && shablon[3] == '0' && shablon[6] == '') {
+        shablon[6] = '0'
+        cell[6].textContent = 'O'
+    }
+    else if (shablon[6] == '0' && shablon[3] == '0' && shablon[0] == '') {
+        shablon[0] = '0'
+        cell[0].textContent = 'O'
+    }
+    else if (shablon[0] == '0' && shablon[3] == '' && shablon[6] == '0') {
+        shablon[3] = '0'
+        cell[3].textContent = 'O'
+    }
+// ----------------------
+    else if (shablon[1] == '0' && shablon[4] == '0' && shablon[7] == '') {
+        shablon[7] = '0'
+        cell[7].textContent = 'O'
+    }
+    else if (shablon[7] == '0' && shablon[4] == '0' && shablon[1] == '') {
+        shablon[1] = '0'
+        cell[1].textContent = 'O'
+    }
+    else if (shablon[1] == '0' && shablon[4] == '' && shablon[7] == '0') {
+        shablon[4] = '0'
+        cell[4].textContent = 'O'
+    }
+// ----------------------
+    else if (shablon[2] == '0' && shablon[5] == '0' && shablon[8] == '') {
+        shablon[8] = '0'
+        cell[8].textContent = 'O'
+    }
+    else if (shablon[8] == '0' && shablon[5] == '0' && shablon[2] == '') {
+        shablon[2] = '0'
+        cell[2].textContent = 'O'
+    }
+    else if (shablon[2] == '0' && shablon[5] == '' && shablon[8] == '0') {
+        shablon[5] = '0'
+        cell[5].textContent = 'O'
+    }
+// -----------------------------------------------
+    else if (shablon[0] == '0' && shablon[4] == '0' && shablon[8] == '') {
+        shablon[8] = '0'
+        cell[8].textContent = 'O'
+    }
+    else if (shablon[8] == '0' && shablon[4] == '0' && shablon[0] == '') {
+        shablon[0] = '0'
+        cell[0].textContent = 'O'
+    }
+// -----------
+    else if (shablon[2] == '0' && shablon[4] == '0' && shablon[6] == '') {
+        shablon[6] = '0'
+        cell[6].textContent = 'O'
+    }
+    else if (shablon[6] == '0' && shablon[4] == '0' && shablon[2] == '') {
+        shablon[2] = '0'
+        cell[2].textContent = 'O'
+    }
+// ------------------- X joyi uyogiga
     else if (shablon[0] == '1' && shablon[1] == '1' && shablon[2] == '') {
         shablon[2] = '0'
         cell[2].textContent = 'O'
-        return
     }
     else if (shablon[0] == '' && shablon[1] == '1' && shablon[2] == '1') {
         shablon[0] = '0'
         cell[0].textContent = 'O'
-        return
     }
     else if (shablon[0] == '1' && shablon[1] == '' && shablon[2] == '1') {
         shablon[1] = '0'
         cell[1].textContent = 'O'
-        return
     }
-    // -----------------
+// -----------
     else if (shablon[3] == '1' && shablon[4] == '1' && shablon[5] == '') {
         shablon[5] = '0'
         cell[5].textContent = 'O'
-        return
     }
     else if (shablon[3] == '' && shablon[4] == '1' && shablon[5] == '1') {
         shablon[3] = '0'
         cell[3].textContent = 'O'
-        return
     }
     else if (shablon[3] == '1' && shablon[4] == '' && shablon[5] == '1') {
         shablon[4] = '0'
         cell[4].textContent = 'O'
-        return
     }
-    // -------------------------------
+// -----------------
     else if (shablon[6] == '1' && shablon[7] == '1' && shablon[8] == '') {
         shablon[8] = '0'
         cell[8].textContent = 'O'
-        return
     }
     else if (shablon[6] == '' && shablon[7] == '1' && shablon[8] == '1') {
         shablon[6] = '0'
         cell[6].textContent = 'O'
-        return
     }
     else if (shablon[6] == '1' && shablon[7] == '' && shablon[8] == '1') {
         shablon[7] = '0'
         cell[7].textContent = 'O'
-        return
     }
-    // ------------------------------------
+// --------------------------
     else if (shablon[0] == '1' && shablon[3] == '1' && shablon[6] == '') {
         shablon[6] = '0'
         cell[6].textContent = 'O'
-        return
     }
     else if (shablon[0] == '' && shablon[3] == '1' && shablon[6] == '1') {
         shablon[0] = '0'
         cell[0].textContent = 'O'
-        return
     }
     else if (shablon[0] == '1' && shablon[3] == '' && shablon[6] == '1') {
         shablon[3] = '0'
         cell[3].textContent = 'O'
-        return
     }
-    // -------------------------------------
+// -----------------
     else if (shablon[1] == '1' && shablon[4] == '1' && shablon[7] == '') {
         shablon[7] = '0'
         cell[7].textContent = 'O'
-        return
     }
     else if (shablon[1] == '' && shablon[4] == '1' && shablon[7] == '1') {
         shablon[1] = '0'
         cell[1].textContent = 'O'
-        return
     }
-    // -------------------------
+    else if (shablon[1] == '1' && shablon[4] == '' && shablon[7] == '1') {
+        shablon[4] = '0'
+        cell[4].textContent = 'O'
+    }
+// ---------------
     else if (shablon[2] == '1' && shablon[5] == '1' && shablon[8] == '') {
         shablon[8] = '0'
         cell[8].textContent = 'O'
-        return
     }
     else if (shablon[2] == '' && shablon[5] == '1' && shablon[8] == '1') {
         shablon[2] = '0'
         cell[2].textContent = 'O'
-        return
     }
     else if (shablon[2] == '1' && shablon[5] == '' && shablon[8] == '1') {
         shablon[5] = '0'
         cell[5].textContent = 'O'
-        return
     }
-    // ----------------------
-    else if (shablon[0] == '1' && shablon[8] == '1' && shablon[3] == '' || shablon[2] == '1' && shablon[6] == '1' && shablon[3] == '') {
-        shablon[3] = '0'
-        cell[3].textContent = 'O'
-        return
+// ----------
+    else if (shablon[2] == '1' && shablon[4] == '1' && shablon[6] == '') {
+        shablon[6] = '0'
+        cell[6].textContent = 'O'
     }
-    // -----------------
-    else if (shablon[1] == '1' && shablon[7] == '1' && shablon[0] == '' || shablon[3] == '1' && shablon[5] == '1' && shablon[0] == '') {
-        shablon[0] = '0'
-        cell[0].textContent = 'O'
+    else if (shablon[6] == '1' && shablon[4] == '1' && shablon[2] == '') {
+        shablon[2] = '0'
+        cell[2].textContent = 'O'
+    }
+// --------------------
+    else {
+        for (let a = 0; a < 9; a++) {
+            if (!shablon[a]) {
+                shablon[a] = '0'
+                cell[a].textContent = 'O'
+                break
+            }
+        }
     }
 }
 
