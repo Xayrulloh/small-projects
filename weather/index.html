@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather app</title>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> -->
-
-  <!--================ Design by foolishdeveloper.com ===================-->
+    <title>Weather information by Xayrulloh</title>
     <style media="screen">
 * {
     margin: 0;
@@ -16,28 +13,25 @@
 body{
     background-repeat: no-repeat;
     background-size: 100%;
-    background-image: url("./globus.jpg");
-    /* background: #448aff; */
+    background-image: url("./universe.jpg");
 }
 
-/* --------------------background */
 .container-fluid{
- width: 410px;
- margin: 50px auto;
- padding: 10px;
+    width: 450px;
+    /* margin: 50px auto; */
+    padding: 10px;
 
 }
-
 
 .inputs {
     padding: 2rem 0 2rem 0;
     text-align: center;
     justify-content: center;
-    /* background: white; */
 
 }
 
 .inputs input[type="text"] {
+    color: white;
     height: 3.5rem;
     width: 20rem;
     background: #212121;
@@ -49,30 +43,14 @@ body{
     border: 2px solid #c2c2c2;
     border-radius: 2px;
     margin-right:4px;
-
 }
-/* .inputs input[type="submit"] {
-    height: 3.2rem;
-    width: 6.5rem;
-    background: #0a67ca;
-    font-weight: bold;
-    color: white;
-    font-size: 1.2rem;
-    margin-top: 20px;
-    border: none;
-    border-radius: 2px;
-} */
 
-/* -------------------------------display */
 .display {
     text-align: center;
     width: 400px;
-    /* color: #16a864; */
 }
 .wrapper {
     margin: 0 9rem;
-
-    /* background-color: white; */
     height: 45vh;
     margin: 50px auto;
     border-radius: 2px;
@@ -81,7 +59,6 @@ body{
 .wrapper h2{
     padding: 5px 0;
     text-align: center;
-    /* background: #0548b5; */
     color: white;
     font-family: sans-serif;
   }
@@ -101,10 +78,53 @@ body{
     color: #f8f8f8;
     font-size: 25px;
   }
+
+  .earth {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+}
+
+.earth:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -20px -20px 50px 2px #000 inset;
+  border-radius: 50%;
+}
+
+.earth > div {
+  width: 200%;
+  height: 100%;
+  animation: spin 30s linear alternate infinite;
+  background: url('./earth.jpeg');
+  /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
+  background-size: cover;
+}
+@keyframes spin {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 </style>
 
 </head>
 <body>
+    <div class="earth">
+        <div></div>
+      </div>
     <div class="container-fluid">
             <section class="main">
             <section class="inputs">
