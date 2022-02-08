@@ -5,6 +5,8 @@ cityinput.onkeyup = element => {
         .then(data => {
             if (data.length) {
                 [cityName.textContent, confirmed.textContent, recovered.textContent, critical.textContent, deaths.textContent] = [`The status of covid in ${data[0].country}`, `The confirmed: ${data[0].confirmed}`, `The recovered: ${data[0].recovered}`, `The critical: ${data[0].critical}`, `The deaths: ${data[0].deaths}`]
+            } else {
+                alert('Wrong country name'); [cityName.textContent, confirmed.textContent, recovered.textContent, critical.textContent, deaths.textContent, cityinput.value] = [null, null, null, null, null, null]
             }
         })
         .catch(err => {alert('Wrong country name'); [cityName.textContent, confirmed.textContent, recovered.textContent, critical.textContent, deaths.textContent, cityinput.value] = [null, null, null, null, null, null]});
