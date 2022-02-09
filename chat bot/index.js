@@ -1,7 +1,7 @@
 getUpdates()
 
 async function sendMessage(userId, sms) {
-    let res = await fetch(`https://api.telegram.org/bot5214282942:AAGDxHsy5OZiJSVhU2aamxxZsuYeT4jRra4/sendMessage`, {
+    let res = await fetch(`https://api.telegram.org/bot5117359761:AAGWAz7tj698LFT8ahBE-RHkRGf9mKjGY0k/sendMessage`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -14,7 +14,7 @@ async function sendMessage(userId, sms) {
 }
 
 async function getUpdates() {
-    let users = await(await fetch(`https://api.telegram.org/bot5214282942:AAGDxHsy5OZiJSVhU2aamxxZsuYeT4jRra4/getUpdates`)).json()
+    let users = await(await fetch(`https://api.telegram.org/bot5117359761:AAGWAz7tj698LFT8ahBE-RHkRGf9mKjGY0k/getUpdates`)).json()
     users = users.result
     let ids = []
     for (let user of users) {
@@ -31,7 +31,7 @@ async function getUpdates() {
 
 async function userInfo(user) {
     chat.innerHTML = null
-    let users = await(await fetch(`https://api.telegram.org/bot5214282942:AAGDxHsy5OZiJSVhU2aamxxZsuYeT4jRra4/getUpdates`)).json()
+    let users = await(await fetch(`https://api.telegram.org/bot5117359761:AAGWAz7tj698LFT8ahBE-RHkRGf9mKjGY0k/getUpdates`)).json()
     users = users.result
     user.getAttribute('id')
     for (let useR of users) {
@@ -59,7 +59,7 @@ async function sendPhotos(userId, photo) {
     formData.append('chat_id', userId)
 	formData.append('photo', photo)
 
-	let response = await fetch(`https://api.telegram.org/bot5214282942:AAGDxHsy5OZiJSVhU2aamxxZsuYeT4jRra4/sendPhoto`, {
+	let response = await fetch(`https://api.telegram.org/bot5117359761:AAGWAz7tj698LFT8ahBE-RHkRGf9mKjGY0k/sendPhoto`, {
 		method: 'POST',
 		body: formData
 	})
