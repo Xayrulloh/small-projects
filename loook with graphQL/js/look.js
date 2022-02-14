@@ -101,7 +101,7 @@ async function addUser (username, contact) {
 }
 
 async function getOrders () {
-    let response = await fetch('https://look-graphql-backend.herokuapp.com/graphql/', {
+    let response = await fetch('https://look-graphql    -backend.herokuapp.com/graphql/', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
