@@ -48,7 +48,7 @@ function intialize() {
 
         if (!gameOver && row == height) {
             gameOver = true;
-            document.getElementById("answer").innerText = `man oylagan soz ${word} idi topomadisku`;
+            document.getElementById("answer").innerText = `man oylagan soz ${word} idi topomadisku res berses yana bowidan boladi ili ctrl + r`;
         }
 
     })
